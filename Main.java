@@ -14,7 +14,6 @@ public class Main {
         numbers. fibonacci(1) and fibonacci(2) are both 1.  For example, fibonacci(6) is 8.*/
 
         int a1 = 6;
-
         int fibonacciSequenceSum = fibonacci(a1);
         System.out.println("\nFibonacci (" + a1 + "): " + fibonacciSequenceSum);
 
