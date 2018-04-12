@@ -12,11 +12,24 @@ public class Main {
 
         /* Write a recursive function to calculate fibonacci(n). fibonacci(n) is the sum of the previous two Fibonacci
         numbers. fibonacci(1) and fibonacci(2) are both 1.  For example, fibonacci(6) is 8.*/
-
         int a1 = 6;
         int fibonacciSequenceSum = fibonacci(a1);
         System.out.println("\nFibonacci (" + a1 + "): " + fibonacciSequenceSum);
 
+        /* Write a recursive function output(word, n) to output a word n times.
+        For example, output("jamitha ", 3) is "jamitha jamitha jamitha". */
+        String word = "Ryan ";
+        String outputWord = output(word, num);
+        System.out.println("Word repeated" + num + "time(s): " + outputWord);
+    }
+
+    private static String output(String word, int num) {
+        if (num == 1) {
+            return word;
+
+        } else {
+            return output(word, num);
+        }
     }
 
     private static int fibonacci(int a1) {
