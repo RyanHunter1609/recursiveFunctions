@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+
 public class Main {
     public static void main(String[] args) {
 
@@ -21,6 +23,30 @@ public class Main {
         String word = "Ryan ";
         String outputWord = output(word, num);
         System.out.println("Word repeated (" + num + ") time(s): " + outputWord);
+
+        /* Write a recursive function to calculate the length of an ArrayList without using ArrayList.size().
+        For example, [a,b,c] has length 3. */
+        ArrayList<Integer> integerArrayList = new ArrayList<>();
+        integerArrayList.add(3);
+        integerArrayList.add(32);
+        integerArrayList.add(111);
+        integerArrayList.add(84);
+        integerArrayList.add(12);
+        integerArrayList.add(2);
+        integerArrayList.add(0);
+        integerArrayList.add(1);
+        int arrayListLength = integerArrayListSize(integerArrayList);
+        System.out.println("Length of Array List: " + arrayListLength);
+    }
+
+    private static int integerArrayListSize(ArrayList<Integer> integerArrayList) {
+        if (integerArrayList.isEmpty()) {
+            return 0;
+        } else {
+            integerArrayList.remove(0);
+            return 1 + integerArrayListSize(integerArrayList);
+
+        }
     }
 
     private static String output(String word, int num) {
