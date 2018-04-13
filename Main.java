@@ -29,14 +29,27 @@ public class Main {
         ArrayList<Integer> integerArrayList = new ArrayList<>();
         integerArrayList.add(3);
         integerArrayList.add(32);
-        integerArrayList.add(111);
-        integerArrayList.add(84);
         integerArrayList.add(12);
         integerArrayList.add(2);
         integerArrayList.add(0);
         integerArrayList.add(1);
         int arrayListLength = integerArrayListSize(integerArrayList);
         System.out.println("Length of Array List: " + arrayListLength);
+
+        /* Write a recursive function to calculate sum(a,b).  sum(a,b) is the sum of a and b.
+        For example, sum(2,3) is 5.*/
+        int a2 = 2;
+        int a3 = 3;
+
+        int sumOf2And3 = recursiveSumOf2Nums(a2, a3);
+        System.out.println("\nSum of add-in 2 and add-in 3: " + sumOf2And3);
+    }
+
+    private static int recursiveSumOf2Nums(int a2, int a3) {
+        if (a3 == 0) {
+            return a2;
+        }
+        return 1 + recursiveSumOf2Nums(a2, a3 - 1);
     }
 
     private static int integerArrayListSize(ArrayList<Integer> integerArrayList) {
