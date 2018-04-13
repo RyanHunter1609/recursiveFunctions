@@ -37,12 +37,30 @@ public class Main {
         System.out.println("Length of Array List: " + arrayListLength);
 
         /* Write a recursive function to calculate sum(a,b).  sum(a,b) is the sum of a and b.
-        For example, sum(2,3) is 5.*/
+        For example, sum(2,3) is 5. */
         int a2 = 2;
         int a3 = 3;
-
         int sumOf2And3 = recursiveSumOf2Nums(a2, a3);
         System.out.println("\nSum of add-in 2 and add-in 3: " + sumOf2And3);
+
+        /* Write a recursive function to calculate exponentiation(base, power).
+        For example, exponentiation(2,3) is 8. */
+        int base = 2;
+        int power = 3;
+        int exponentiation = recursiveExponentiation(base, power);
+        System.out.println("Exponentiation " + base + "^" + power + ": " + exponentiation);
+
+        /* Write a recursive function to count the number of occurrences of character [C] in a String.
+        You must use String.indexOf().  For example, "abbacca" has 3 a's. */
+
+    }
+
+    private static int recursiveExponentiation(int base, int power) {
+        if (power == 0) {
+            return 1;
+        } else {
+            return base * recursiveExponentiation(base, power - 1);
+        }
     }
 
     private static int recursiveSumOf2Nums(int a2, int a3) {
