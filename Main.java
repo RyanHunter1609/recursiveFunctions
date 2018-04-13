@@ -8,7 +8,7 @@ public class Main {
         If n is 1 or less, then factorial(n) is 1.  For example, factorial(3) is 6. */
         int num = 5;
         int calculateFactorial = factorial(num);
-        System.out.println("\nFactorial of " + num + ": " + calculateFactorial);
+        System.out.println("\nFactorial (" + num + "): " + calculateFactorial);
 
         /* Write a recursive function to calculate fibonacci(n). fibonacci(n) is the sum of the previous two Fibonacci
         numbers. fibonacci(1) and fibonacci(2) are both 1.  For example, fibonacci(6) is 8.*/
@@ -20,7 +20,7 @@ public class Main {
         For example, output("jamitha ", 3) is "jamitha jamitha jamitha". */
         String word = "Ryan ";
         String outputWord = output(word, num);
-        System.out.println("Word repeated" + num + "time(s): " + outputWord);
+        System.out.println("Word repeated (" + num + ") time(s): " + outputWord);
     }
 
     private static String output(String word, int num) {
@@ -28,7 +28,7 @@ public class Main {
             return word;
 
         } else {
-            return output(word, num);
+            return word + output(word, num - 1);
         }
     }
 
